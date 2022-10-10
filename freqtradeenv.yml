@@ -1,0 +1,73 @@
+name: freqtrade
+channels:
+  - conda-forge
+# - defaults
+dependencies:
+# 1/4 req main
+    - python=3.9 # changed
+    - numpy
+    - pandas
+    - pip
+    - cython # added, not sure if really needed
+    - aiohttp
+    - SQLAlchemy
+    - python-telegram-bot
+    - arrow
+    - cachetools
+    - requests
+    - urllib3
+    - wrapt
+    - jsonschema
+#    - TA-Lib # this is moved to pip section
+    - tabulate
+    - jinja2
+    - blosc
+    - sdnotify
+    - fastapi
+    - uvicorn
+    - pyjwt
+    - colorama
+    - questionary
+    - prompt-toolkit
+    - python-rapidjson # added
+    - pytables # added
+
+    # ============================
+    # 2/4 req dev
+
+#    - coveralls
+#    - flake8
+#    - mypy
+#    - pytest
+#    - pytest-asyncio
+#    - pytest-cov
+#    - pytest-mock
+#    - isort
+#    - nbconvert
+
+    # ============================
+    # 3/4 req hyperopt
+
+    - scipy
+    - scikit-learn
+    - filelock
+    - scikit-optimize
+    - joblib
+    - progressbar2
+    # ============================
+    # 4/4 req plot
+
+ #   - plotly
+ #   - jupyter
+
+    - pip:
+        - pycoingecko
+        - py_find_1st
+#        - tables # moved to first section
+#        - pytest-random-order # not using dev version
+#        - flake8-type-annotations # not using dev version
+        - TA_Lib # added
+        - blosc # added
+        - ccxt
+ #       - flake8-tidy-imports # not using dev version
+        - -e .
